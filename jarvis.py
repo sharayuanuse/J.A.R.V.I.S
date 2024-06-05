@@ -49,7 +49,6 @@ def sendEmail(to,content):
     server.sendmail('sharayu.anuse@gmail.com',to,content)
     server.close()
 def get_weather(city):
-    api_key = "045d8ca40410b5da0f143b916b67f213"
     url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}"
     response = requests.get(url)
     data = response.json()
